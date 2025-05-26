@@ -12,14 +12,13 @@
 				"method": "GET",
 				"header": [],
 				"url": {
-					"raw": "http://localhost:8080/user",
-					"protocol": "http",
+					"raw": "localhost:8081/jogos",
 					"host": [
 						"localhost"
 					],
-					"port": "8080",
+					"port": "8081",
 					"path": [
-						"user"
+						"jogos"
 					]
 				}
 			},
@@ -32,7 +31,7 @@
 				"header": [],
 				"body": {
 					"mode": "raw",
-					"raw": "  { \r\n    \"id\": 1, \r\n    \"data\": \"2024-12-06T00:00:00\", \r\n    \"valorTotal\": 1000.0, \r\n    \"status\": \"Cancelado\", \r\n    \"descricao\": \"lorem ipsum\" \r\n  } ",
+					"raw": "{\r\n    \"ano\": 2025,\r\n    \"genero\": \"xdxdx\",\r\n    \"estudio\": \"aaada\"\r\n}",
 					"options": {
 						"raw": {
 							"language": "json"
@@ -40,14 +39,13 @@
 					}
 				},
 				"url": {
-					"raw": "http://localhost:5224/pedidos",
-					"protocol": "http",
+					"raw": "localhost:8081/jogos",
 					"host": [
 						"localhost"
 					],
-					"port": "5224",
+					"port": "8081",
 					"path": [
-						"pedidos"
+						"jogos"
 					]
 				}
 			},
@@ -58,16 +56,24 @@
 			"request": {
 				"method": "PUT",
 				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"ano\": 2023,\r\n    \"genero\": \"xesque\",\r\n    \"estudio\": \"novo\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
 				"url": {
-					"raw": "http://localhost:5224/pedidos/1",
-					"protocol": "http",
+					"raw": "localhost:8081/jogos/2",
 					"host": [
 						"localhost"
 					],
-					"port": "5224",
+					"port": "8081",
 					"path": [
-						"pedidos",
-						"1"
+						"jogos",
+						"2"
 					]
 				}
 			},
@@ -79,15 +85,14 @@
 				"method": "GET",
 				"header": [],
 				"url": {
-					"raw": "http://localhost:5224/pedidos/1",
-					"protocol": "http",
+					"raw": "localhost:8081/jogos/2",
 					"host": [
 						"localhost"
 					],
-					"port": "5224",
+					"port": "8081",
 					"path": [
-						"pedidos",
-						"1"
+						"jogos",
+						"2"
 					]
 				}
 			},
@@ -99,15 +104,14 @@
 				"method": "DELETE",
 				"header": [],
 				"url": {
-					"raw": "http://localhost:5224/pedidos/1",
-					"protocol": "http",
+					"raw": "localhost:8081/jogos/3",
 					"host": [
 						"localhost"
 					],
-					"port": "5224",
+					"port": "8081",
 					"path": [
-						"pedidos",
-						"1"
+						"jogos",
+						"3"
 					]
 				}
 			},
