@@ -19,7 +19,7 @@ public class JogoRepository {
         return jogos.stream()
                 .filter(jogo -> jogo.getId() == id)
                 .findFirst()
-                .orElseThrow(() -> new RuntimeException("Jogo não encontrado para o ID: " + id));
+                .orElseThrow(() -> new RuntimeException("jogo nao encontrado "));
     }
 
     public void save(Jogo jogo) {
@@ -31,7 +31,7 @@ public class JogoRepository {
         Jogo jogoExistente = jogos.stream()
                 .filter(jogo -> jogo.getId() == id)
                 .findFirst()
-                .orElseThrow(() -> new RuntimeException("Jogo não encontrado para o ID: " + id));
+                .orElseThrow(() -> new RuntimeException("jogo nao encontardo"));
 
         jogoExistente.setAno(jogoAtualizado.getAno());
         jogoExistente.setGenero(jogoAtualizado.getGenero());
@@ -40,9 +40,9 @@ public class JogoRepository {
 
     public void delete(long id) {
         Jogo jogo = jogos.stream()
-                .filter(j -> j.getId() == id)
+                .filter(jogao -> jogao.getId() == id)
                 .findFirst()
-                .orElseThrow(() -> new RuntimeException("Jogo não encontrado para o ID: " + id));
+                .orElseThrow(() -> new RuntimeException("jogo nao encontrado"));
 
         jogos.remove(jogo);
     }

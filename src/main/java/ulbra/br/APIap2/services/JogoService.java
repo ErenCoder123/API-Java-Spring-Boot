@@ -13,7 +13,8 @@ public class JogoService {
     private final JogoRepository jogoRepository;
 
     @Autowired
-    public JogoService(JogoRepository jogoRepository) {
+    public JogoService(JogoRepository jogoRepository)
+    {
         this.jogoRepository = jogoRepository;
     }
 
@@ -21,19 +22,23 @@ public class JogoService {
         return jogoRepository.getAll();
     }
 
-    public Jogo getJogoById(long id) {
+    public Jogo getJogoById(long id)
+    {
         return jogoRepository.getById(id);
     }
 
-    public void addJogo(Jogo jogo) {
+    public void addJogo(Jogo jogo)
+    {
         jogoRepository.save(jogo);
     }
 
-    public void updateJogo(long id, Jogo jogoAtualizado) {
+    public void updateJogo(long id, Jogo jogoAtualizado)
+    {
         jogoRepository.update(id, jogoAtualizado);
     }
-    
-    public void deleteJogo(long id) {
+
+    public void deleteJogo(long id)
+    {
         jogoRepository.delete(id);
     }
 }
